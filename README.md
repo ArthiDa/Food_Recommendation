@@ -15,8 +15,8 @@ In this Machine Learning Project, I tried to create a recommender system that re
 
 - Fetch all meals by first letter from mealdb API ( www.themealdb.com/api/json/v1/1/search.php?f={a-z} ).
 - Convert JSON to pandas data frame.
-- Takes the necessary series from the data frame and renames. Finally, shape of the data frame is (293,8)
-- Finally export the data frame as a CSV file named 'meals.csv'.
+- Takes the necessary columns from the data frame and renames them. Finally, the shape of the data frame is (293,8)
+- Export the data frame as a CSV file named 'meals.csv'.
 
 ## Preprocessing the dataset
 
@@ -35,9 +35,8 @@ From sklearn, I apply CountVectorizer to find the max 1500 words that occur most
 Write a Python script to show meals recommendation for selected meals with the help of streamlit app.
 
 ## Application Interface
-![alt text]([http://url/to/img.png](https://ibb.co/v12M5wx)https://ibb.co/v12M5wx)
+![Recommendation Interface](https://github.com/ArthiDa/Food_Recommendation/blob/main/app_interface.png)
 
+## Reference
 
-
-
-
+This Machine Learning Project was inspired by [CampusX](https://www.youtube.com/@campusx-official)
