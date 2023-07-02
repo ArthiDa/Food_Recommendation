@@ -20,10 +20,24 @@ In this Machine Learning Project, I tried to create a recommender system that re
 
 ## Preprocessing the dataset
 
-There are some null values in the dataset. I also observed that some values are empty strings. To handle these - 
+The idea is to make some tags using the 'title', 'instructions', 'category', 'area', and 'tags' columns in the dataset. To do that need to preprocess the dataset. There are some null values in the dataset. I also observed that some values are empty strings. To handle these - 
 
 - I count the total null values for every column. Only one column named 'tags' has all null values. The count of null values for the column is 117. So, instead of dropping the entire rows of null values, I filled them by their 'category' and 'area' values.
 - After handling the null values I find that some values in the 'video' column have empty strings. The count of empty strings for the column is 15. So, I dropped them.
 - Finally, the dataset has no null values and empty strings.
+- To make tags for each meal I just simply added the above mention column.
+- At the end of preprocessing, I just apply lowercase in my modified 'tags' column.
+
+## Applying Text Vectorization and Finding Similar Meals using Cosine Distance
+From sklearn, I apply CountVectorizer to find the max 1500 words that occur most in the 'tags' column without 'English' stop words. Convert them into NumPy ndarray and calculate the cosine_similarity. Sorted the cosine_similarity in reverse order and only takes the first 5 similar words for particular meals with their index. In the end, we just export the meals modified dataset and similarity array into PKL file.
+
+## Streamlit
+Write a Python script to show meals recommendation for selected meals with the help of streamlit app.
+
+## Application Interface
+![alt text]([http://url/to/img.png](https://ibb.co/v12M5wx)https://ibb.co/v12M5wx)
+
+
+
 
 
